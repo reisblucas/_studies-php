@@ -12,7 +12,14 @@
     <h1>Initial challenges in PHP</h1>
   </header>
   <main>
-    <a href="sucessorantecessor.php">Sucessor and Antecessor</a>
+    <ol>
+      <li>
+        <a href="sucessorantecessor.php">Sucessor and Antecessor</a>
+      </li>
+      <li>
+        <a href="randomnum.php">Random Number</a>
+      </li>
+    </ol>
   </main>
 </body>
 
