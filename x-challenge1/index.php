@@ -19,6 +19,9 @@
       <li>
         <a href="randomnum.php">Random Number</a>
       </li>
+      <li>
+        <a href="local-monetary-converter.php">Local Monetary Converter</a>
+      </li>
     </ol>
   </main>
 </body>
