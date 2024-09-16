@@ -44,11 +44,14 @@
 
         echo "Dollar Today: 09/12/2024 - 11:33 GMT-3";
         echo "<br/>";
+        echo "<br/>";
         echo "Real: $real";
         echo "<br/>";
-        echo "Dollar: $usd";
+        echo "Dollar: <strong>$usd*</strong>";
         echo "<br/>";
       ?>
+      <p>This is a hardcoded exchange rate*</p>
+
       <form method="POST">
         <button type="submit" name="reset">Convert Again</button>
       </form>
