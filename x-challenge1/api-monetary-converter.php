@@ -27,7 +27,7 @@
     $coinToBrlData = $exchangeRateData->{$currencyTarget};
     $apiCallTime = $coinToBrlData->create_date;
     $coinValueNow = round(floatval($coinToBrlData->bid), 2);
-    $moneyConverted = $moneyInAccount * $coinValueNow;
+    $moneyConverted = $moneyInAccount / $coinValueNow;
 
     return new class ($apiCallTime, $coinToBrlData, $coinValueNow, $moneyConverted) {
       public $apiCallTime;
@@ -84,10 +84,7 @@
         $real = $fmtREAL->formatCurrency($balance, 'BRL');
         $usd = $fmtUSD->formatCurrency($usdBrlData->moneyConverted, 'USD');
         $eur = $fmtUSD->formatCurrency($eurBrlData->moneyConverted, 'EUR');
-        
-        $btcgreater = $balance / $btcBrlData->coinValueNow;
-        $btclesser = $btcBrlData->coinValueNow / $balance;
-        $btc = $btcBrlData->coinValueNow > $balance ? $btcgreater : $btclesser;
+        $btc = $btcBrlData->moneyConverted;
       ?>
       <p>Exchange Rate - <?php echo $apiCallTime ?>
         <br />
