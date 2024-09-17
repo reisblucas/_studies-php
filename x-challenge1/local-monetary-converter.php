@@ -38,7 +38,7 @@
         $fmtUSD = new NumberFormatter("en_US", NumberFormatter::CURRENCY );
         $fmtREAL = new NumberFormatter("pt_BR", NumberFormatter::CURRENCY );
         $moneyInAccount = (int) $_POST['money'];
-        $moneyConverted = (int) $_POST['money'] * 5.66;
+        $moneyConverted = (int) $_POST['money'] / 5.66;
         $usd =  $fmtUSD->formatCurrency($moneyConverted, 'USD');
         $real =  $fmtUSD->formatCurrency($moneyInAccount, 'BRL');
 
