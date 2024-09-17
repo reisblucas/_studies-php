@@ -3,6 +3,10 @@
 
   
   if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['submit'])) {
+    // rand() - algorithm from 1951 - Linear Congrential Generator
+    // mt_rand() - algorithm from 1987 - Mersenne Twister - 4x faster than rand and reliable.
+    // From PHP 7.1 rand point to mt_rand so it's the same
+    // random_int - more secure than other ones but slower, it randomizes and cryptograph at the same timej
     $generatedNum = random_int(0, 100);
   }
   
